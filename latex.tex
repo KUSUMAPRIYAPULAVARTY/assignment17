@@ -159,39 +159,59 @@ Let $\vec{V}$ be a finite dimensional vector space over the field $\mathbb{F}$ a
 \end{align}
 and $\vec{V}^*$ is the space of all linear functionals on $\vec{V}$
 \section{Solution}
-Let
-\begin{align}
-    \vec{B}=\myvec{\vec{v}_1&\vec{v}_2&\hdots&\vec{v}_n}\\
-    \vec{B}^*=\myvec{\vec{f}_1&\vec{f}_2&\hdots&\vec{f}_n}
-    \end{align}
-    Rewriting \eqref{1}
-    \begin{align}
-        (\vec{f}_i)^T\vec{v}_j=\delta_{ij}\\
-    \therefore \text{from \eqref{1}  } (\vec{B}^*)^T\vec{B}=\vec{I}\label{2}\\
-    \alpha_i=\sum _{k=1}^n a_k\vec{v}_k\\
-    =\vec{B}\vec{a}\\
-    \vec{a}=\myvec{a_1\\a_2\\\vdots\\a_n}
-\end{align}
-Since $\alpha_i$ vectors are non-zeros, there exists atleast one non zero $a_l \in \mathbb{F}$ where $l \in [1,n]$ 
-\begin{align}
-    \implies \vec{a}\neq \vec{0}
-\end{align}
-Any linear functional $f:\vec{V}\rightarrow \mathbb{F}$ can be expressed as
-\begin{align}
-    \vec{f}=\vec{B}^*\vec{c}\\
-    \vec{c}=\myvec{c_1\\c_2\\\vdots\\c_n}, c_i \in \mathbb{F} \text{ where }i \in [1,n]
-\end{align}
-Consider
-\begin{align}
-    f(\alpha_i)=\vec{f}^T\alpha_i\\
-    =(\vec{B}^*\vec{c})^T\alpha_i\\
-    =\vec{c}^T(\vec{B}^*)^T\vec{B}\vec{a}\\
-    =\vec{c}^T\vec{a}
-\end{align}
-A linear functional with $c_i \neq 0 \forall i \in [1,n]$ always lies in $\vec{V}^*$. And for $\vec{a}\neq \vec{0}$,
-\begin{align}
-    f(\alpha_i)=\vec{c}^T\vec{a}\neq 0,i=1,2,\hdots,m
-\end{align}
+\begin{table*}[!ht]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{PARAMETERS}&\textbf{DESCRIPTION}\\
+\hline
+$\mathbb{F}$&Field\\
+\hline
+$\vec{V}$& Finite dimensional vector space over $\mathbb{F}$\\
+\hline
+$\alpha_1,\alpha_2,\hdots,\alpha_m$& non zero vectors in $\vec{V}$\\
+\hline
+$f:\vec{V}\rightarrow \mathbb{F}$&Linear functional on $\vec{V}$\\
+\hline
+\end{tabular}
+\caption*{TABLE 0:Input Parameters}
+\end{table*}
+
+\begin{table*}[!hb]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{PARAMETERS}&\textbf{MATRIX REPRESENTATION}\\
+\hline
+ Basis for $\vec{V}$&$ \vec{B}=\myvec{\vec{v}_1&\vec{v}_2&\hdots&\vec{v}_n}$\\
+\hline
+Basis for $\vec{V}^*$& $\vec{B}^*=\myvec{\vec{f}_1&\vec{f}_2&\hdots&\vec{f}_n}$\\
+\hline
+ & \\
+$f_i(\vec{v}_j)=\delta_{ij}$& $(\vec{f}_i)^T\vec{v}_j=\delta_{ij}$\\
+\hline
+ & \\
+$\vec{B},\vec{B}^*$ are dual basis&$(\vec{B}^*)^T\vec{B}=\vec{I}$\\
+\hline
+$\alpha_i=\sum _{k=1}^n a_k\vec{v}_k,i\in [1,m]$&$ \alpha_i=\vec{B}\vec{a}$ where $ \vec{a}=\myvec{a_1\\a_2\\\vdots\\a_n}, a_l \in \mathbb{F},l \in [1,n]$$\\
+\hline
+$\alpha_i\neq \vec{0}$&$\vec{a}\neq\vec{0}$\\
+\hline
+Any linear functional $f$ over $\vec{V}$& $\vec{f}=\vec{B}^*\vec{c},\text{where }\vec{c}=\myvec{c_1\\c_2\\\vdots\\c_n}, c_l \in \mathbb{F} ,l \in [1,n]$\\
+\hline
+ & \\
+ & $ \vec{f}^T\alpha_i$\\
+$ f(\alpha_i)$ &$
+    =(\vec{B}^*\vec{c})^T\alpha_i$\\
+     &$=\vec{c}^T(\vec{B}^*)^T\vec{B}\vec{a}$\\
+     &$=\vec{c}^T\vec{a}$ \\
+\hline
+ & \\
+$f$ with  $c_l \neq 0 \forall l \in [1,n]$ lies in $\vec{V}^*,\vec{a}\neq\vec{0}$ & $f(\alpha_i)=\vec{c}^T\vec{a}\neq 0, i=1,2,\hdots,m $\\
+\hline
+\end{tabular}
+\caption*{TABLE 1:Proof}
+\end{table*}
 \end{document}
 
 
